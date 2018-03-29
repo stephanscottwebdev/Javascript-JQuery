@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDV321 Advanced Javascript - Dynamic Content and Structure Project</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(document).ready(function () {
+
+            $("#chiliNav").click(function () {
+                $("#chili").show();
+                $("#begin").hide();
+            });  
+
+            $("#chiliHideInstructions").click(function () {
+                $("#chiliInstructions").hide();
+            });
+
+            $("#chiliShowInstructions").click(function () {
+                $("#chiliInstructions").show();
+            });
+
+            $("#chiliShowHalf").click(function () {
+                $(".chiliHalf").show();
+                $(".chiliDouble").hide();
+                $(".chiliNormal").hide();
+            });
+
+            $("#chiliShowNormal").click(function () {
+                $(".chiliHalf").hide();
+                $(".chiliDouble").hide();
+                $(".chiliNormal").show();
+            });
+
+            $("#chiliShowDouble").click(function () {
+                $(".chiliHalf").hide();
+                $(".chiliDouble").show();
+                $(".chiliNormal").hide();
+            });
+
+        });
+    </script>
+</head>
+
+ <body class="container">
+        <nav class="navbar navbar-inverse navbar" >
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="#">Dynamic Chili Recipe</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="#" id="chiliNav" >Chili</a></li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+    
+    
+        <div class="recipe" id="chili">
+        <div class="row">
+            <div class="col-lg-6"><img class="img-responsive img-rounded" src="imgs/chili.jpg"></div>
+            <div class="col-lg-6">
+                <h1><strong>Crockpot Chili</strong></h1>
+                <p class="chiliNormal">Serves: 6</p>
+                <p class="chiliHalf">Serves: 3</p>
+                <p class="chiliDouble">Serves: 9</p>
+                <p class="chiliNormal">Preparation: 25 minutes</p>
+                <p class="chiliHalf">Preparation: 12.5 minutes</p>
+                <p class="chiliDouble">Preparation: 37 minutes</p>
+                <p>Cooking: 6 hours</p>
+            </div>
+        </div>
+        
+        <div class="row recipeBtn">
+            <div class="col-lg-12">
+                <button type="button" id="chiliShowHalf" class="btn btn-success btn-xs">Serves 3</button>
+                <button type="button" id="chiliShowNormal" class="btn btn-success btn-xs">Serves 6</button>
+                <button type="button" id="chiliShowDouble" class="btn btn-success btn-xs">Serves 9</button>
+                <button type="button" id="chiliHideInstructions" class="btn btn-danger btn-xs">Hide Instructions</button>
+                <button type="button" id="chiliShowInstructions" class="btn btn-warning btn-xs">Show Instructions</button>
+            </div>
+        </div>
+        <div class="row">
+                    <div class="col-lg-4 chiliHalf">
+                <h2>Ingredients:</h2>
+                <p>1 tbsp. cooking oil</p>
+                <p>1/2 cup onion</p>
+                <p>1/2 cup chopped peppers</p>
+                <p>2 tbsp. Chili powder</p>
+                <p>1/2 tsp. Hot chili powder (optional)</p>
+                <p>1/2 lb ground beef or chicken</p>
+                <p>1 cans Red Beans</p>
+                <p>1 cans Kidney Beans</p>
+                <p>1 cans Tomato Puree</p>
+                <p>1 cans Tomato Sauce</p>
+                <p>1/2 cup shredded cheese (optional)</p>
+                <p>1/4 cup sour cream (optional)</p>
+            </div>
+            <div class="col-lg-4 chiliNormal">
+                <h2>Ingredients:</h2>
+                <p>2 tbsp. cooking oil</p>
+                <p>1 cup onion</p>
+                <p>1 cup chopped peppers</p>
+                <p>4 tbsp. Chili powder</p>
+                <p>1 tsp. Hot chili powder (optional)</p>
+                <p>1 lb ground beef or chicken</p>
+                <p>2 cans Red Beans</p>
+                <p>2 cans Kidney Beans</p>
+                <p>2 cans Tomato Puree</p>
+                <p>2 cans Tomato Sauce</p>
+                <p>1 cup shredded cheese (optional)</p>
+                <p>1/2 cup sour cream (optional)</p>
+            </div>
+            <div class="col-lg-4 chiliDouble">
+                <h2>Ingredients:</h2>
+                <p>3 tbsp. cooking oil</p>
+                <p>1 1/2 cup onion</p>
+                <p>1 1/2 cup chopped peppers</p>
+                <p>6 tbsp. Chili powder</p>
+                <p>1 1/2 tsp. Hot chili powder (optional)</p>
+                <p>1 1/2 lb ground beef or chicken</p>
+                <p>3 cans Red Beans</p>
+                <p>3 cans Kidney Beans</p>
+                <p>3 cans Tomato Puree</p>
+                <p>3 cans Tomato Sauce</p>
+                <p>1 1/2 cup shredded cheese (optional)</p>
+                <p>3/4 cup sour cream (optional)</p>
+            </div>
+            <div id="chiliInstructions" class="col-lg-6">
+                <h2>Insructions:</h2>
+                <p>Heat cooking oil in skillet</p>
+                <p>Saute onions and peppers for 5 minutes</p>
+                <p>Add spices and stir for 30 seconds</p>
+                <p>Add meat and cook until browned. Approximately 15 minutes</p>
+                <p>Pour contents of skillet into crock pot</p>
+                <p>Rinse beans and place in crockpot</p>
+                <p>Open and pour Tomato puree and sauce into crock pot</p>
+                <p>Cover crockpot and cook on low for 6 hours </p>
+                <p>Serve into individual bowls and top with sour cream and cheese</p>
+            </div>
+        </div>
+        </div>
+    </body>
+
+</html>
