@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Date Object In Class Exercises</title>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3>Javascript Date Object - In Class Exercises</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post the   page to your WDV221 folder on the server. Make a link in your WDV221 Intro   Javascript page for this assignment. Contact your instructor and demonstrate   that you have completed the assignment. </p>
+<p>Using Blackboard complete the In Class Exercise Assignment. Download your   Homework project and being working on it with your remaining time. </p>
+<h3>For each exercise use a comment line to put the Exercise number within the   script. Also place a short description of what the script is doing.</h3>
+<hr />
+<p>Use a runtime script and document.write( ) to output the requested results.</p>
+<p>Create and display a new Date object called today with today's date. <strong>Today is: </strong> <script> var today= new Date(); document.write(today);</script></p>
+<p>Create and dispaly a new Date object called yesterday, with yesterday's date. <strong>Yesterday is: </strong> <script> var yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1); 
+document.write(yesterday);</script></p>
+<p>Create and display a new Date object called tomorrow, with tomorrow's date. <strong>Tomorrow is: </strong><script> var tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1); 
+document.write(tomorrow);</script></p>
+<p>Create and display a new Date object called oneWeek with the date one week from today. <strong>One week from today is:</strong> <script> var oneWeek = new Date(); oneWeek.setDate(oneWeek.getDate() + 7); 
+document.write(oneWeek);</script></p>
+<p>Create and dispaly a new Date object called tenDays with the date 10 days from today. <strong>10 Days from today is: </strong> <script> var tenDays = new Date(); tenDays.setDate(tenDays.getDate() + 10); 
+document.write(tenDays);</script></p>
+
+<script> var x=today.getDate(); document.write("<p>The current day is: " + x + "</p>");</script>
+
+<script> var d = new Date(); var n = d.getDay(); document.write("<p>The current day of the week is: " + n + "</p>");</script>
+
+<script> var a = new Date(); var b = a.getMonth();document.write("<p>The current month is: " + b + "</p>"); </script>
+
+<script> var y = new Date(); var z = y.getFullYear();document.write("<p>The current year is: " + z + "</p>"); </script>
+
+<p>Format today's date into mm/dd/yyyy and display:
+ <script>
+var today1 = new Date();
+var dd = today1.getDate();
+var mm = today1.getMonth()+1; //January is 0!
+var yyyy = today1.getFullYear(); 
+if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
+
+var today1 = mm+'/'+dd+'/'+yyyy; 
+ document.write(today1);</script>	(Hint: get the individual pieces from the date object and concatenate them together with the slashes)</p>
+
+<p>Format today's date into dd/mm/yyyy and display: 
+ <script>
+var today2 = new Date();
+var dd = today2.getDate();
+var mm = today2.getMonth()+1; //January is 0!
+var yyyy = today2.getFullYear(); 
+if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
+
+var today2 = dd+'/'+mm+'/'+yyyy; 
+ document.write(today2);</script>(Hint: get the individual pieces from the date object and concatenate them together with the slashes)</p>
+ 
+<h3>Special Date!</h3>
+<p>Page last modified:	<script>var mod = document.lastModified; document.write(mod); </script> (Hint: Not part of the Date object)</p>
+</body>
+</html>

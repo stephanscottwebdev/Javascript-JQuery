@@ -1,0 +1,84 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+	function compareNumbers ()
+	{
+		var value1=document.getElementById("value1").value;
+		var value2=document.getElementById("value2").value;
+		
+		if (value1 > value2) 
+		{
+			document.getElementById("results").value=value1;
+	    }
+		
+		else if (value1 < value2)
+		{
+			document.getElementById("results").value=value2;	
+		}
+		
+		else if (value1 == value2)
+		{
+			document.getElementById("results").value="Equal";	
+		}
+	}
+	
+		
+	function compareNames ()
+	{
+		var value1=document.getElementById("value1").value;
+		var value2=document.getElementById("value2").value;
+
+		value1=value1.toLowerCase();
+		value2=value2.toLowerCase();
+
+		if(value1==value2)
+		{
+			document.getElementById("results").value ="Same";
+		}
+		
+		else
+		{
+			document.getElementById("results").value ="Different";
+		}
+	}
+
+	
+</script>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project-4 Compare Numbers and Names</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post the   page to your WDV221 folder on the server. Make a link in your WDV221 Intro   Javascript page for this assignment. Contact your instructor and demonstrate   that you have completed the assignment. </p>
+<p>Using Blackboard complete the In Class Exercise Assignment. Download your   Homework project and being working on it with your remaining time.</p>
+<hr />
+<form id="form1" name="form1" method="post" action="">
+  <p>Use this form to gather input and display results.</p>
+  <p>Value 1: 
+    <input type="text" name="value1" id="value1" />
+  </p>
+  <p>Value 2: 
+    <input type="text" name="value2" id="value2" />
+  </p>
+  <p>Result: 
+    <input type="text" name="results" id="results" />
+  </p>
+  <p>
+    <input onclick="compareNumbers ();" name="" type="button" value="Compare Numbers" />
+  </p>
+  <p><input onclick="compareNames ();" name="" type="button" value="Compare Names" />
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset" />
+  </p>
+</form>
+
+<p>1. Create a function called compareNumbers( ) that will compare two numbers entered in the form above. The function should display the largest number or &quot;Equal&quot; if both values are the same. </p>
+<p>2. Create a function called compareNames( ) that will compare two names entered in the form above. The comparison should NOT be case sensitive. The function should display &quot;Same&quot; or &quot;Different&quot;.</p>
+</body>
+</html>

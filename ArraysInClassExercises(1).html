@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Project-6 Arrays In Class Exercises</title>
+
+<script>
+
+var teams = new Array(" Dragons", " Pirates", " Bears");
+
+var score = new Array(0,0,0);
+
+function displayTeams()
+	{
+		for (var i=0; i<3; i++) 
+		{
+ 	 	document.write("<p>" + teams[i] + " " + score[i] + "</p>");
+		}
+	}
+	
+function lookupTeamForLoop()
+	{
+		var teamName = document.getElementById("inName").value;	
+		
+		var message = "Team name matches";
+		
+		for(var i=0; i < teams.length; i++)
+		{
+			if(teamName == teams[i])
+			{
+				message = "Team name does not match";
+
+				break;
+			}
+		}
+		alert(message);
+	}
+</script>
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project-6 Arrays - In Class Exercises</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post the   page to your WDV221 folder on the server. Make a link in your WDV221 Intro   Javascript page for this assignment. Contact your instructor and demonstrate   that you have completed the assignment. </p>
+<p>Using Blackboard complete the In Class Exercise Assignment. Download your   Homework project and being working on it with your remaining time. </p>
+<h3>For each exercise use a comment line to put the Exercise number within the   script. Also place a short description of what the script is doing.</h3>
+<hr />
+<p>For each of the following use the teams array provided in the script of this page. </p>
+<p>1. Display the array in an alert.</p>
+
+<script>
+	alert(teams);
+</script>
+
+<p>2. Display the first row of the array in an alert.</p>
+
+<script>
+	alert(teams[0]);
+</script>
+
+<p>3. Use a for loop to write each row of the array out to this page. Each row should be in a paragraph.</p>
+
+<script>
+	for(var i=0; i<teams.length; i++){
+	document.write("<p>"+ teams[i] +"</p>");
+	}
+</script>
+
+<p>4. Use a while loop to write each row of the array out to this page. Each row should be in a paragraph.</p>
+
+<script>
+	var i=0;
+	while(i<teams.length)
+	{
+	document.write("<p>"+ teams[i] +"</p>");
+	i++
+	}
+</script>
+
+<p>5. Use a loop to write out each row of the array as list items within the following list.</p>
+<ol>
+
+<span style = "text-decoration:underline">List of Team Names</span>
+
+<script>
+	var i=0;
+	while(i<teams.length)
+	{
+	document.write("<li>"+ teams[i] +"</li>");
+	i++
+	}
+</script>
+</ol>
+<p>6. Create an array called scores. It will have three rows. Load a 0 into each row. This is a parallel array to teams. </p>
+<p>7. Use a loop to write out each row of the scores array as list items in the following list. </p>
+<ol>
+
+<span style = "text-decoration:underline">Team Scores</span>
+
+<script>
+	var i=0;
+	while(i<score.length)
+	{
+	document.write("<li>"+ score[i] +"</li>");
+	i++
+	}
+</script>
+</ol>
+<p>8. Create a function called displayTeams( ). It will use a loop to write out the Team name and score in the same paragraph. Run the function. Your output should look like:</p>
+
+<p>Hustlers	0</p>
+
+<script>
+displayTeams()
+</script>
+
+<p>9. Write a loop that will 3 to each value in the scores array. Run the displayTeams( ) function to display the update scores. </p>
+
+<script>
+document.write;displayTeams()
+</script>
+
+<p>10. Write a function that will search the team array for a given name. If it finds the name it will display the team's score. If not a message &quot;Team is not listed' will be displayed. HINT: Check your notes for an example to start with. Activate this function with a button. </p>
+<form>
+<p>Enter Team name: <input type="text" name="inName" id="inName"></p>
+ <input onclick="lookupTeamForLoop()"type="button" name="button" id="button" value="Search" />
+ </form>
+</body>
+</html>

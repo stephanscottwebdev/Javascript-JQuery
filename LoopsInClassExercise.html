@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Loops In Class Exercises</title>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Project-5 Loops In Class Exercises</h2>
+<p>&nbsp;</p>
+<h3>Instructions: </h3>
+<p>Please complete the following exercises using Javascript loops as indicated.  Please place your code on this page. Use runtime scripts unless told otherwise. </p>
+<p>1. Create a For loop that will print out the  numbers 0 to 4 each on a seperate line.</p>
+
+<script>
+for (var i=0;  i <=4;  i++)
+	{
+		document.write("<p>" + i + "</p>");	
+	}
+</script>
+
+<p>2. Create a For loop that will print out the  numbers 4 to 0 each on a seperate line.</p>
+<!-- Why do I have to double space my variable? -->
+<script>
+for (var i=4;  i >-1;  i--)
+	{
+		document.write("<p>" + i + "</p>");	
+	}
+</script>
+
+<p>3. Create a For loop that will print out even numbers from 2 to 10 each on a seperate line.</p>
+
+<script>
+for (var i=2;  i <=10;  i+=2)
+	{
+		document.write("<p>" + i +  "</p>");	
+	}
+</script>
+<p>4. Create a While loop that will print out the numbers 1 to 5 each on a seperate line.</p>
+
+<script>
+var i=0;
+while (i < 5)
+	{
+		i++;
+		document.write("<p>" + i + "</p>");	
+	}
+</script>
+
+<p>5. Create a While loop that will print out then numbers 5 to 1 each on a seperate line.</p>
+
+<script>
+var i=5;
+while (i > 0)
+	{
+		document.write("<p>" + i + "</p>");	
+		i--;
+	}
+</script>
+
+<p>6. Create a For loop that will print the following  lines. Each line should be in a paragraph element.</p>
+<blockquote>
+ <p>Number: 1<br />
+    Number: 2<br />
+    Number: 3</p>
+</blockquote>
+
+<script>
+for (var i=1;  i<=3;  i++)
+	{
+		document.write("<p>Number: " + i + "</p>");	
+	}
+</script>
+
+<p>7. Create a loop that will print out 2- 20 by twos. Example: 2 4 6 8 ...</p>
+
+<script>
+for (var i=2;  i <=20;  i+=2)
+	{
+		document.write(i);	
+	}
+</script>
+
+<p>8. Create a loop that will print out the following numbers (5,10,15,20,25...) until one is greater than 40.</p>
+
+<script>
+for (var i=5;  i <=40;  i+=5)
+	{
+		document.write(i + ",");	
+	}
+</script>
+<p>9. Create a loop that will print out  6 of the following messages (Option 1, Option 2, Option 3, etc. ) as list items within the list below.</p>
+<ol>Please Select one of the following options:
+
+<script>
+for (var i=1;  i <=6;  i++)
+	{
+		document.write("<li>Option " + i + "</li>");	
+	}
+</script>
+
+</ol>
+<p>10. Create a While loop that will use a prompt to ask the user for a number. The body of the loop will print out a message &quot;The number is: ?&quot; with the number entered. The loop will end when the user enters a number greater than 100. </p>
+<script>
+
+var numberLoop=0
+	while (numberLoop < 100)
+	{
+		numberLoop = prompt("Enter a number greater than 100 to stop this loop")
+	}
+			
+	alert("You entered: " + numberLoop + "");
+	
+</script>
+<p>&nbsp;</p>
+</body>
+</html>

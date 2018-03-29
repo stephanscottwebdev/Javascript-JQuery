@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+function  lookupCourse(){
+var inCourse=document.getElementById("courseNumber").value;
+		
+	inCourse=inCourse.toLowerCase();
+	
+	if(inCourse=="wdv101")
+	{
+		document.getElementById("outCourse").innerHTML= " Intro to HTML and CSS"; 
+	}
+	else if(inCourse=="wdv151")
+	{
+		document.getElementById("outCourse").innerHTML= " Intro to Web Design"; 
+	}
+	else if(inCourse=="wdv221")
+	{
+		document.getElementById("outCourse").innerHTML= " Intro to Javascript"; 
+	}
+	else
+	{
+		document.getElementById("outCourse").innerHTML= " Course Name not found";
+	}
+}
+
+function lookupCourseSwitch(){
+var inCourse1=document.getElementById("courseNumber2").value;
+
+inCourse1=inCourse1.toLowerCase();
+
+switch(inCourse1)
+{
+	case "wdv101":
+		document.getElementById("outCourse1").innerHTML= " Intro to HTML and CSS";
+		break;
+	case "wdv151":
+		document.getElementById("outCourse1").innerHTML= " Intro to Web Design";
+		break;
+	case "wdv221":
+		document.getElementById("outCourse1").innerHTML= " Intro to Javascript";
+		break;
+	default:
+		document.getElementById("outCourse1").innerHTML= " Course Name not found";
+}
+}
+</script>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project-4 Assignment: Course Lookup</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post the   page to your WDV221 folder on the server. Make a link in your WDV221 Intro   Javascript page for this assignment. Contact your instructor and demonstrate   that you have completed the assignment. </p>
+<p>Using Blackboard complete the In Class Exercise Assignment. Download your   Homework project and being working on it with your remaining time.</p>
+<hr />
+<p>Use the following data for both functions.</p>
+<table width="378" border="0">
+  <tr>
+    <td width="124"><strong>Course Number</strong></td>
+    <td width="238"><strong>Course Name</strong></td>
+  </tr>
+  <tr>
+    <td>WDV101</td>
+    <td>Intro to HTML and CSS</td>
+  </tr>
+  <tr>
+    <td>WDV151</td>
+    <td>Intro to Web Design</td>
+  </tr>
+  <tr>
+    <td>WDV221</td>
+    <td>Intro to Javascript</td>
+  </tr>
+</table>
+<h3>&nbsp;</h3>
+<h3>PART I</h3>
+<p>1. Create a function called lookupCourse( ). This function will take the Course Number that you enter and display the corresponding Course Name on the form. If no match is found display &quot;Course Name not found&quot; in the Course Name field. This function should use If statements to provide the answer.</p>
+<form id="form2" name="form2" method="post" action="">
+  <p>Enter Course Number: 
+    <input type="text" name="courseNumber" id="courseNumber" />
+  </p>
+  <p>Course Name:<span id="outCourse"></span> </p>
+  <p>
+    <input onclick="lookupCourse()" type="button" name="Look Up Course Name" id="Look Up Course Name" value="Lookup Course Name" />
+    <input type="reset" name="button8" id="button8" value="Reset" />
+  </p>
+</form>
+<p>&nbsp;</p>
+<h3>PART II</h3>
+<p>2. Create a function called lookupCourseSwitch( ). This function will take the Course Number that you enter and display the corresponding Course Name on the form. If no match is found display &quot;Course Name not found&quot; in the Course Name field. This function should use a Javascript Switch statement to find the matching Course Name. It should  use the 'default' option to display the &quot;Course Name not found&quot; message.</p>
+<form id="form3" name="form2" method="post" action="">
+  <p>Enter Course Number:
+    <input type="text" name="courseNumber2" id="courseNumber2" />
+  </p>
+  <p>Course Name:<span id="outCourse1"></span> </p>
+  <p>
+    <input onclick="lookupCourseSwitch()" type="button" name="Look Up Course Name2" id="Look Up Course Name2" value="Lookup Course Name" />
+    <input type="reset" name="button7" id="button9" value="Reset" />
+  </p>
+</form>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

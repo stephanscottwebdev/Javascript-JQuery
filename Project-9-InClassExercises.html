@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
+
+<script>
+
+function redFont(inputID) 
+{
+	document.getElementById(inputID).style.color="red";	
+}
+
+function blackFont(inputID) 
+{
+	document.getElementById(inputID).style.color="black";	
+}
+
+function center(inputID) 
+{
+	document.getElementById(inputID).style.textAlign="center";
+}
+
+function left(inputID) 
+{
+	document.getElementById(inputID).style.textAlign="left";
+}
+
+function changeFont1(inputID) 
+{
+	document.getElementById(inputID).style.fontFamily = "Tahoma, Geneva, sans-serif";
+}
+
+function changeFont2(inputID) 
+{
+	document.getElementById(inputID).style.fontFamily = "Times New Roman, Times, serif";
+}
+
+function size1(inputID) 
+{
+	document.getElementById(inputID).style.fontSize = "24px";
+}
+
+function size2(inputID) 
+{
+	document.getElementById(inputID).style.fontSize = "initial";
+}
+
+function background(inputID) 
+{
+	document.getElementById(inputID).style.backgroundColor = "yellow";
+}
+
+function hideFrog(inputID) 
+{
+	document.getElementById(inputID).style.visibility = "hidden";
+}
+
+function showFrog(inputID) 
+{
+	document.getElementById(inputID).style.visibility = "initial";
+}
+
+function doubleFrog(inputID) 
+{
+	document.getElementById(inputID).style.width = "200px";
+	document.getElementById(inputID).style.height = "200px";
+}
+
+function originalFrog(inputID) 
+{
+	document.getElementById(inputID).style.width = "100px";
+	document.getElementById(inputID).style.height = "100px";
+}
+</script>
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3 id="q3">Style Object - CSS Interactions - In Class Exercises</h3>
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+<p>1. <span id="q1" onclick="redFont('q1')">Click this paragraph to change the font color to red.</span> </p>
+<p>2. <span id="q2" class="style1" onmouseover="blackFont('q2')">Mouseover this paragraph to change the font color to black.</span></p>
+<p onmouseover="center('q3')">3. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+<p>4. Click the button to left align the H3 element. </p>
+<p>
+  <label>
+  <input onclick="left('q3')" type="button" name="button" id="button" value="Submit" />
+  </label>
+</p>
+<p id="q5" onmousemove="changeFont1('q5')"><span id="q52" onclick="changeFont2('q52')">5. Part 1. Mouseover this paragraph to change the font to a font of you choice. Part 2. Click on this paragraph to return the font to the default font.</span></p>
+<p>6. Click on the button to make the word <span id="q6">SALE</span> font size 24. </p>
+<p>
+  <label>
+  <input onclick="size1('q6')"type="button" name="button2" id="button2" value="Click me" />
+  </label>
+</p>
+<p>7. Click on the button to return the word to its original size.</p>
+<p>
+  <label>
+    <input onclick="size2('q6')"type="button" name="button3" id="button3" value="Submit" />
+  </label>
+</p>
+<p id="q8" onclick="background('q8')">8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+<p  onclick="hideFrog('frog')">9. Use an onclick event to hide the Frog picture shown below.</p>
+<p>10. Use the following button to make the Frog picture shown below reappear.</p>
+<p>
+  <input onclick="showFrog('frog')" type="button" name="button4" id="button4" value="Submit" />
+</p>
+<p>11. Mouseover the following image to make its height and width double its original size. </p>
+<p><img id="frog" onmouseover="doubleFrog('frog')" src="frog.jpg" width="100" height="100" /></p>
+<p onclick="originalFrog('frog')">12. Use a click event on the image to make it return to original size. </p>
+<p>&nbsp;</p>
+</body>
+</html>

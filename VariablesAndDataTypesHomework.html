@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types In Class Exercises</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Variables and Data Types - Homework</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post the page to your WDV221 folder on the server. Make a link in your WDV221 Intro Javascript page for this assignment. Contact your instructor and demonstrate that you have completed the assignment. </p>
+<p>Using Blackboard complete the In Class Exercise Assignment. Download your Homework project and being working on it with your remaining time. </p>
+<h3>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</h3>
+<hr />
+<p>1. Create a runtime script on this page. In that script define four variables called color1 through color4. Assign each a color. Use a document.write to output the four colors as elements in an ordered list. <strong>Hint</strong>: Write a quick ordered list in HTML and then replace the HTML with content from your script. Use the document.write( ) to output the &lt;li&gt; elements. Place the list below this &lt;p&gt;.</p>
+
+<ol>
+  <script>
+
+  	// 1 - Output four different colors as elements in an ordered list.
+  
+  	var color1="Red";
+  	var color2="Blue";
+  	var color3="Yellow";
+  	var color4="Black"
+    
+  	document.write("<li>" + color1 + "</li>");
+  	document.write("<li>" + color2 + "</li>");
+  	document.write("<li>" + color3 + "</li>");
+  	document.write("<li>" + color4 + "</li>");
+
+  	function displayColors ()
+  	{
+		alert(color1);
+		alert(color2);
+		alert(color3);
+		alert(color4);  
+  	}
+  
+  	displayColors();
+	
+  </script>
+  
+</ol>
+
+
+
+<p>2. Write a function called displayColors( ). Use alert( ) to display the values of the color1 through color4 variables. Display an alert that explains why the function works as it does. Activate this function as part of the runtime function in 1. above.</p>
+
+	<script>
+		alert("A function is something we call where we want it. So if I want it to be called with the first question I have to put it in that area, but after the first portion since its a runtime.");
+	</script>
+    
+    	<script>
+	
+		function nameInformation ()
+		{
+			var inName = prompt("What is your name?", "");
+			
+			alert("You entered: " + inName + "");
+			
+			var numCharacters = inName.length;
+			
+			alert("There are: " + numCharacters + " characters in this name");
+		}
+		
+		function getEmailName()
+		{
+	  		
+			var emailAddress = prompt("What is your email address?","")
+	  		
+			var atSymbal = emailAddress.indexOf("@"); 	  
+	  		
+			var emailName = emailAddress.substr(0, atSymbal);
+	  		
+			alert(emailName);
+     	}
+	
+	    </script>
+
+<p onclick="nameInformation()">3. Create a function called nameInformation( ).  Use the prompt( ) to ask the user for a name. Store that name in a local variable called inName within the function.  Display the name that was entered using an alert( ).  Use the String Object to determine how many characters are in the name. Display the length of the name using an alert( ). Use an onclick event handler to activate this function.</p>
+
+
+<p onclick="displayName">4. Create a function called displayInName( ). Display the value of the inName variable from the nameInformation( ) from 3. above.  Display an alert that explains why the function works as it does. <strong>NOTE</strong>: Do not define inName in this function. You are display the variable from the nameInformation( ) function.</p>
+	
+    <script>
+	 
+  		function displayInName()
+		{
+		//inName = prompt("What is your name?", "");
+
+		alert("I am not sure what you mean here. I made a comment about inName did previously. I may have misunderstoon the question if you want me to explain how the function works as it does.");
+		
+		}
+  </script>
+
+
+<p>5. Create a function called getEmailName( ). Use a prompt to ask the user for an email address. Use methods from the String Object to display the name from the email address. For example if the user enters &quot;jLeenan@yahoo.com&quot; your function should display &quot;jLeenan&quot;.  Use an event handler to activate this function.</p>
+
+<input type = "button" value = "Enter Email" onclick = "getEmailName()"/>
+<p>Grading:</p>
+<p>There are five exercises on this document. Each exercise is graded seperately and totaled for the Project grade. Each exercise will be graded using the following scale.</p>
+<table width="530" border="1">
+  <tr>
+    <td width="138">Grade</td>
+    <td width="376">Expectation</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Works as expected. Correctly uses concepts presented in class. Documented as needed and well formatted.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Works as expected. Uses some of the concepts presented in class. Lacks documentation if needed or poorly formatted/structured.</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Produces results but not as expected OR Exercise is attempted but produces an error.</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Does not produce any results. Fails to use any concepts presented in class or not attempted.</td>
+  </tr>
+</table>
+</body>
+</html>
